@@ -1,0 +1,69 @@
+<view class="page">
+  <view class="nav">
+    <view class="brand">
+      <image class="logo" src="/images/logo.png" mode="aspectFill" />
+      <text class="brand-name">{{brand}}</text>
+    </view>
+    <button class="nav-action" bindtap="onPrimaryTap">免费体验</button>
+  </view>
+
+  <view class="hero-section">
+    <view class="badge">
+      <view class="badge-dot"></view>
+      <text>{{badgeMain}}</text>
+      <view class="badge-separator"></view>
+      <text class="badge-highlight">{{badgeSub}}</text>
+    </view>
+
+    <view class="hero">
+      <text class="title-line">{{titlePrefix}} <text class="title-highlight">{{titleHighlight}}</text> {{titleSuffix}}</text>
+      <text class="title-line">{{titleSecondLine}}</text>
+    </view>
+
+    <text class="description">{{description}}</text>
+
+    <view class="actions">
+      <button class="primary-button" bindtap="onPrimaryTap">
+        <text>立刻体验</text>
+        <text class="arrow">→</text>
+      </button>
+      <button class="secondary-button" bindtap="onFeatureTap">了解功能</button>
+    </view>
+  </view>
+
+  <view id="features" class="features-section">
+    <view class="section-head">
+      <text class="section-title">全面覆盖求职备考各个环节</text>
+      <text class="section-subtitle">从岗位解析到实战模拟，为你提供一站式求职解决方案</text>
+    </view>
+
+    <view class="feature-list">
+      <view tt:for="{{features}}" tt:key="title" class="feature-card">
+        <view class="feature-icon {{item.tone}}">
+          <text>{{item.code}}</text>
+        </view>
+        <text class="feature-title">{{item.title}}</text>
+        <text class="feature-description">{{item.description}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="footer">
+    <view class="footer-brand">
+      <image class="footer-logo" src="/images/logo.png" mode="aspectFill" />
+      <text>{{brand}}</text>
+    </view>
+    <view class="footer-links">
+      <button
+        tt:for="{{footerLinks}}"
+        tt:key="*this"
+        class="footer-link"
+        data-name="{{item}}"
+        bindtap="onFooterLinkTap"
+      >
+        {{item}}
+      </button>
+    </view>
+    <text class="copyright">© 2026 胡老师面试助手 · PURITY NEXUS LTD · All rights reserved.</text>
+  </view>
+</view>
