@@ -1,11 +1,23 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/assessment/assessment",
+    "pages/result/result",
+    "pages/about/about",
+    "pages/faq/faq",
+    "pages/privacy/privacy",
+    "pages/terms/terms"
   ],
   "window": {
-    "navigationBarTitleText": "胡老师面试助手",
+    "navigationBarTitleText": "求职有谱儿",
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black",
     "backgroundColor": "#f6f7f9"
+  },
+  "usePrivacyCheck": true,
+  "networkTimeout": {
+    "request": 60000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
   }
 }

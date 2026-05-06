@@ -1,0 +1,11 @@
+<view class="page">
+  <view class="card">
+    <text class="eyebrow">About</text>
+    <text class="title">关于{{brand}}</text>
+    <text class="paragraph">{{brand}}面向正在准备简历投递和面试的求职者，帮助用户把求职准备拆成可执行的动作。</text>
+    <view class="point" tt:for="{{points}}" tt:key="*this">
+      <view class="dot"></view>
+      <text>{{item}}</text>
+    </view>
+  </view>
+</view>

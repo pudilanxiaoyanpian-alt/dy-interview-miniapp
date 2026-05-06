@@ -97,9 +97,9 @@
 .title-line {
   display: block;
   color: #171717;
-  font-size: 60rpx;
+  font-size: 56rpx;
   font-weight: 800;
-  line-height: 1.16;
+  line-height: 1.18;
 }
 
 .title-highlight {

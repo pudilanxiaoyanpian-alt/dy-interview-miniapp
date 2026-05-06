@@ -1,0 +1,50 @@
+<view class="page">
+  <view class="hero">
+    <text class="eyebrow">免费测评</text>
+    <text class="title">先测出求职短板，再决定怎么补</text>
+    <text class="subtitle">填写目标岗位和简历摘要，系统会在本地生成一份初步备考建议。当前版本不上传数据到服务器。</text>
+  </view>
+
+  <view class="panel">
+    <view class="field">
+      <text class="label">称呼</text>
+      <input class="input" data-field="name" value="{{form.name}}" placeholder="选填，例如：小张" placeholder-class="placeholder" bindinput="onInput" />
+    </view>
+
+    <view class="field">
+      <text class="label required">目标岗位</text>
+      <input class="input" data-field="role" value="{{form.role}}" placeholder="例如：产品经理 / 前端工程师 / 运营" placeholder-class="placeholder" bindinput="onInput" />
+    </view>
+
+    <view class="field">
+      <text class="label">工作经验</text>
+      <input class="input" data-field="experience" value="{{form.experience}}" placeholder="例如：3 年 / 应届生 / 转行求职" placeholder-class="placeholder" bindinput="onInput" />
+    </view>
+
+    <view class="field">
+      <text class="label required">简历摘要</text>
+      <textarea class="textarea" data-field="resume" value="{{form.resume}}" placeholder="粘贴 3-5 条核心经历、项目成果或简历摘要" placeholder-class="placeholder" bindinput="onInput" />
+    </view>
+
+    <view class="field">
+      <text class="label">重点关注</text>
+      <view class="chips">
+        <button tt:for="{{focusOptions}}" tt:key="key" class="chip {{item.active ? 'chip-active' : ''}}" data-key="{{item.key}}" bindtap="onToggleFocus">
+          {{item.label}}
+        </button>
+      </view>
+    </view>
+
+    <view class="consent" bindtap="onConsentTap">
+      <view class="checkbox {{consent ? 'checkbox-on' : ''}}">{{consent ? '✓' : ''}}</view>
+      <view class="consent-text">
+        <text>我已阅读并同意</text>
+        <text class="link" catchtap="onPrivacyTap">《隐私政策》</text>
+        <text>和</text>
+        <text class="link" catchtap="onTermsTap">《服务条款》</text>
+      </view>
+    </view>
+
+    <button class="submit" bindtap="onSubmit">生成初步测评</button>
+  </view>
+</view>

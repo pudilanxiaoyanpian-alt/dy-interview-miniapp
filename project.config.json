@@ -1,0 +1,17 @@
+{
+  "description": "求职有谱儿抖音小程序项目配置",
+  "appid": "ttdff9a944419e627e01",
+  "projectname": "求职有谱儿",
+  "miniprogramRoot": "./",
+  "compileType": "miniprogram",
+  "setting": {
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "urlCheck": true,
+    "autoCompile": true
+  },
+  "packOptions": {
+    "ignore": []
+  }
+}

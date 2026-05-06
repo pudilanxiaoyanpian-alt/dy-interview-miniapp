@@ -1,0 +1,36 @@
+<view class="page">
+  <view class="summary">
+    <text class="eyebrow">初步测评结果</text>
+    <text class="title">{{role}} 求职准备度</text>
+    <view class="score-card">
+      <text class="score">{{score}}</text>
+      <text class="score-label">综合准备度</text>
+    </view>
+    <text class="summary-text">这是基于你填写内容生成的本地初步建议。正式 AI 分析和人工辅导入口后续可接入后端服务。</text>
+  </view>
+
+  <view class="section">
+    <text class="section-title">五维复盘</text>
+    <view class="dimension" tt:for="{{dimensions}}" tt:key="name">
+      <view class="dimension-head">
+        <text class="dimension-name">{{item.name}}</text>
+        <text class="dimension-value">{{item.value}}</text>
+      </view>
+      <view class="bar"><view class="bar-fill" style="width: {{item.value}}%;"></view></view>
+      <text class="dimension-note">{{item.note}}</text>
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">下一步建议</text>
+    <view class="action" tt:for="{{actions}}" tt:key="*this">
+      <text class="action-index">{{index + 1}}</text>
+      <text class="action-text">{{item}}</text>
+    </view>
+  </view>
+
+  <view class="actions">
+    <button class="primary" bindtap="onRestart">重新测评</button>
+    <button class="secondary" bindtap="onHome">返回首页</button>
+  </view>
+</view>

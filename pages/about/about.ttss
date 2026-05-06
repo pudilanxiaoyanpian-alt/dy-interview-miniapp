@@ -1,0 +1,52 @@
+.page {
+  min-height: 100vh;
+  padding: 48rpx 32rpx;
+  background: #f6f7f9;
+}
+
+.card {
+  padding: 36rpx;
+  border: 1rpx solid #e5e7eb;
+  border-radius: 16rpx;
+  background: #ffffff;
+}
+
+.eyebrow {
+  color: #2563eb;
+  font-size: 24rpx;
+  font-weight: 800;
+}
+
+.title {
+  display: block;
+  margin-top: 16rpx;
+  color: #171717;
+  font-size: 42rpx;
+  font-weight: 900;
+}
+
+.paragraph {
+  display: block;
+  margin: 24rpx 0;
+  color: #475569;
+  font-size: 28rpx;
+  line-height: 1.7;
+}
+
+.point {
+  display: flex;
+  gap: 16rpx;
+  padding: 18rpx 0;
+  color: #334155;
+  font-size: 27rpx;
+  line-height: 1.55;
+}
+
+.dot {
+  width: 12rpx;
+  height: 12rpx;
+  margin-top: 14rpx;
+  border-radius: 50%;
+  background: #2563eb;
+  flex: 0 0 auto;
+}

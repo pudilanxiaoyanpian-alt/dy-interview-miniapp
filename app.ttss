@@ -1,6 +1,6 @@
 page {
   min-height: 100vh;
-  background: #fafafa;
+  background: #f6f7f9;
   color: #171717;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
 }
@@ -26,4 +26,19 @@ button::after {
 
 image {
   display: block;
+}
+
+input,
+textarea {
+  width: 100%;
+  color: #171717;
+  font-size: 28rpx;
+}
+
+textarea {
+  min-height: 220rpx;
+}
+
+.placeholder {
+  color: #a3a3a3;
 }

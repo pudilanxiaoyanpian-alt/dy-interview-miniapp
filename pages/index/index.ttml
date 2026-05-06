@@ -4,7 +4,7 @@
       <image class="logo" src="/images/logo.png" mode="aspectFill" />
       <text class="brand-name">{{brand}}</text>
     </view>
-    <button class="nav-action" bindtap="onPrimaryTap">免费体验</button>
+    <button class="nav-action" bindtap="onPrimaryTap">免费测评</button>
   </view>
 
   <view class="hero-section">
@@ -16,7 +16,8 @@
     </view>
 
     <view class="hero">
-      <text class="title-line">{{titlePrefix}} <text class="title-highlight">{{titleHighlight}}</text> {{titleSuffix}}</text>
+      <text class="title-line">{{titlePrefix}}</text>
+      <text class="title-line"><text class="title-highlight">{{titleHighlight}}</text> {{titleSuffix}}</text>
       <text class="title-line">{{titleSecondLine}}</text>
     </view>
 
@@ -24,7 +25,7 @@
 
     <view class="actions">
       <button class="primary-button" bindtap="onPrimaryTap">
-        <text>立刻体验</text>
+        <text>开始免费测评</text>
         <text class="arrow">→</text>
       </button>
       <button class="secondary-button" bindtap="onFeatureTap">了解功能</button>
@@ -33,8 +34,8 @@
 
   <view id="features" class="features-section">
     <view class="section-head">
-      <text class="section-title">全面覆盖求职备考各个环节</text>
-      <text class="section-subtitle">从岗位解析到实战模拟，为你提供一站式求职解决方案</text>
+      <text class="section-title">覆盖求职准备关键环节</text>
+      <text class="section-subtitle">先测问题，再补短板，把简历和面试准备落到具体动作上</text>
     </view>
 
     <view class="feature-list">
@@ -56,14 +57,14 @@
     <view class="footer-links">
       <button
         tt:for="{{footerLinks}}"
-        tt:key="*this"
+        tt:key="name"
         class="footer-link"
-        data-name="{{item}}"
+        data-path="{{item.path}}"
         bindtap="onFooterLinkTap"
       >
-        {{item}}
+        {{item.name}}
       </button>
     </view>
-    <text class="copyright">© 2026 胡老师面试助手 · PURITY NEXUS LTD · All rights reserved.</text>
+    <text class="copyright">© 2026 求职有谱儿 · All rights reserved.</text>
   </view>
 </view>
