@@ -5,17 +5,26 @@ const EMPTY_FORM = {
   resume: ""
 };
 
+const FOCUS_OPTIONS = [
+  { key: "resume", label: "简历表达", active: true },
+  { key: "position", label: "岗位匹配", active: true },
+  { key: "interview", label: "面试问答", active: false },
+  { key: "project", label: "项目复盘", active: false }
+];
+
+function normalizeFocusOptions(options) {
+  return options.map((item) => ({
+    ...item,
+    className: item.active ? "chip-active" : ""
+  }));
+}
+
 Page({
   data: {
     brand: "求职有谱儿",
     form: { ...EMPTY_FORM },
     consent: false,
-    focusOptions: [
-      { key: "resume", label: "简历表达", active: true },
-      { key: "position", label: "岗位匹配", active: true },
-      { key: "interview", label: "面试问答", active: false },
-      { key: "project", label: "项目复盘", active: false }
-    ]
+    focusOptions: normalizeFocusOptions(FOCUS_OPTIONS)
   },
 
   onInput(event) {
@@ -34,7 +43,9 @@ Page({
       active: item.key === key ? !item.active : item.active
     }));
 
-    this.setData({ focusOptions });
+    this.setData({
+      focusOptions: normalizeFocusOptions(focusOptions)
+    });
   },
 
   onConsentTap() {

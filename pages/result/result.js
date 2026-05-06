@@ -38,6 +38,6 @@ Page({
   },
 
   onHome() {
-    tt.switchTab ? tt.switchTab({ url: "/pages/index/index" }) : tt.reLaunch({ url: "/pages/index/index" });
+    tt.reLaunch({ url: "/pages/index/index" });
   }
 });

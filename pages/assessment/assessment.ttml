@@ -29,7 +29,7 @@
     <view class="field">
       <text class="label">重点关注</text>
       <view class="chips">
-        <button tt:for="{{focusOptions}}" tt:key="key" class="chip {{item.active ? 'chip-active' : ''}}" data-key="{{item.key}}" bindtap="onToggleFocus">
+        <button tt:for="{{focusOptions}}" tt:key="key" class="chip {{item.className}}" data-key="{{item.key}}" bindtap="onToggleFocus">
           {{item.label}}
         </button>
       </view>
