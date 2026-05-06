@@ -36,7 +36,7 @@
     </view>
 
     <view class="consent" bindtap="onConsentTap">
-      <view class="checkbox {{consent ? 'checkbox-on' : ''}}">{{consent ? '✓' : ''}}</view>
+      <view class="checkbox {{consentClass}}">{{consentMark}}</view>
       <view class="consent-text">
         <text>我已阅读并同意</text>
         <text class="link" catchtap="onPrivacyTap">《隐私政策》</text>

@@ -19,12 +19,20 @@ function normalizeFocusOptions(options) {
   }));
 }
 
+function getConsentViewState(consent) {
+  return {
+    consent,
+    consentClass: consent ? "checkbox-on" : "",
+    consentMark: consent ? "✓" : ""
+  };
+}
+
 Page({
   data: {
     brand: "求职有谱儿",
     form: { ...EMPTY_FORM },
-    consent: false,
-    focusOptions: normalizeFocusOptions(FOCUS_OPTIONS)
+    focusOptions: normalizeFocusOptions(FOCUS_OPTIONS),
+    ...getConsentViewState(false)
   },
 
   onInput(event) {
@@ -49,7 +57,7 @@ Page({
   },
 
   onConsentTap() {
-    this.setData({ consent: !this.data.consent });
+    this.setData(getConsentViewState(!this.data.consent));
   },
 
   onPrivacyTap() {
